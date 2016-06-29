@@ -1,8 +1,16 @@
 <template name="layout">
-<ul>
- <li><a href="{{pathFor 'home'}}">home</a></li>
- <li><a href="{{pathFor 'profiles'}}">profiles</a></li>
- <li><a href="{{pathFor 'myprofile'}}">myprofile</a></li>
-</ul>
-{{> yield}}
+<h1 class="text-center" style="font:64pt bold Helvetica">Quiz 2</h1>
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation"><a href="{{pathFor 'home'}}">home</a></li>
+        <li role="presentation"><a href="{{pathFor 'profiles'}}">profiles</a></li>
+        <li role="presentation"><a href="{{pathFor 'myprofile'}}">myprofile</a></li>
+        <li role="presentation"> {{> loginButtons}} </li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      {{> yield}}
+    </div>
+  </div>
 </template>

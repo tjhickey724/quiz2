@@ -1,3 +1,14 @@
 <template name="profiles">
   <h1> Profiles</h1>
+  {{#if currentUser}}
+  <ul>
+    {{#each profile in profiles}}
+      <li>{{profile.firstname}}({{profile.nickname}}) {{profile.lastname}},
+        {{profile.email}}, {{profile.birthyear}}
+      </li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <h2>You must sign in to see the profiles</h2>
+  {{/if}}
 </template>
